@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Administrator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            padding-top: 50px;
+        }
+
+        .login {
+            width: 300px;
+            border: 1px solid black;
+            padding: 20px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0 15px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: black;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="login">
+    <h2>Login Administrator</h2>
+    <p>Sistem Informasi Rumah Adat Jambi</p>
+
+    <form onsubmit="login(event)">
+        <label>Username / Email</label>
+        <input type="text" id="username"
+            placeholder="Masukkan username admin" required>
+
+        <label>Password</label>
+        <input type="password" id="password"
+            placeholder="Masukkan password" required>
+
+        <button type="submit">LOGIN →</button>
+    </form>
+</div>
+
+<script>
+function login(event) {
+    event.preventDefault();
+
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+
+    alert("Username: " + username);
+}
+</script>
+
+</body>
+</html>
